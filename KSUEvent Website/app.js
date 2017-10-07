@@ -98,3 +98,18 @@ function fillInAddress() {
         }
     }
 }
+
+$('#departureDate').datetimepicker({
+    format: 'dd/MM/yyyy',
+    pickTime: false,language: 'en'
+});
+$('#timeRangeStart').datetimepicker({pickDate: false,
+    format: 'hh:mm:ss',    
+    pick12HourFormat: true,
+    pickSeconds: false,    
+    language: 'en'});
+$('#timeRangeEnd').datetimepicker({pickDate: false,
+    format: 'hh:mm:ss',
+    pick12HourFormat: true,
+    pickSeconds: false,    
+    language: 'en'});

@@ -5,34 +5,67 @@
 		<script src="jquery/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="popper/popper.min.js"></script>
-	</head>
+	    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+		<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
+  </head>
 	
 	<body>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h1>LSD - The Trip Optimizer</h1>
+		<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">LSD - Optimize Your Trip!</a>
 			</div>
-			<div class="panel-body">
-			
-				<div class="col-sm-12">
-					<h3>Starting Location</h3>
-					<div class="row">
-						<input class="input-lg col-sm-12" id="finish"> </input>
+			<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home</a></li>
+			<li class="active"><a href="#">About</a></li>
+			<li class="active"><a href="#">Contact Us</a></li>
+			</ul>
+		</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<h3>Starting Location</h3>
+				<div class="row">
+					<input class="input-lg col-xs-12 col-sm-12 col-md-12 col-lg-12" id="finish"> </input>
+				</div>
+			</div>
+			<div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<h3>Destination Location</h3>
+				<div class="row">
+					<input class="input-lg col-xs-12 col-sm-12 col-md-12 col-lg-12" id="start"> </input>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h4>Departure Date</h4>
+				<div class="well">
+					<div id="departureDate" class="input-append date col-xs-12 col-sm-12 col-md-3 col-lg-3">
+						<input type="input-md text"></input>
+						<span class="add-on">
+							<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+						</span>
+					</div>
+					<div id="timeRangeStart" class="input-append date col-xs-12 col-sm-12 col-md-3 col-lg-3">
+						<input type="input-md text"></input>
+						<span class="add-on">
+							<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+						</span>
+					</div>
+					<div id="timeRangeEnd" class="input-append date col-xs-12 col-sm-12 col-md-3 col-lg-3">
+						<input type="input-md text"></input>
+						<span class="add-on">
+							<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+						</span>
 					</div>
 				</div>
-				<div class="col-sm-12">
-					<h3>Destination Location</h3>
-					<div class="row">
-						<input class="input-lg col-sm-12" id="start"> </input>
-					</div>
-				</div>
-				
-				
-				<hr>
-				
-				<button class="btn btn-primary col-sm-12">Optimize Trip!</input>
+			</div>
+				<button class="btn btn-primary col-xs-12 col-sm-12 col-md-12 col-lg-12">Optimize Trip!</input>
 			</div>
 		</div>
+
+
+
+
 	</body>
 
 	<script src="app.js"></script>
