@@ -1,5 +1,4 @@
-$("#startTimeRange").timepicker();
-$("#endTimeRange").timepicker();
+
 
 
 var placeSearch, start;
@@ -98,7 +97,7 @@ function fillInAddress() {
     }
 }
 $(document).ready(function(){
-    var date_input=$('input[name="date"]'); //our date input has the name "date"
+    var date_input=$('#date'); //our date input has the name "date"
     var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
     var options={
     format: 'mm/dd/yyyy',
@@ -108,4 +107,6 @@ $(document).ready(function(){
     time: true,
     };
     date_input.datepicker(options);
+	$("#startTimeRange").timepicker();
+	$("#endTimeRange").timepicker();
 })

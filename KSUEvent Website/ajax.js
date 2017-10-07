@@ -1,25 +1,32 @@
+
+
 function getOptimizedTrip() {
 	var startLocation = $("#start").val();
 	var destinationLocation = $("#finish").val();
-	var rangeDate = $("#date");
+	var rangeDate = $("#date").val();
 	var rangeStart = $("#startTimeRange").val();
 	var rangeEnd = $("#endTimeRange").val();
-	//2017-10-07T13:51:25.586Z
-	var startDate = rangeDate + "T" + range
-	$.get(
-		'http://kenthackapi.azurewebsites.net/api/Direction', 
-		{
+	
+	var startDate = rangeDate + " " + rangeStart;
+	var endDate = rangeDate + " " + rangeEnd;
+	
+	console.log(startDate);
+	
+	$.getJSON({
+		'url': 'http://kenthackapi.azurewebsites.net/api/Direction', 
+		'data': {
 			'startingAddress': startLocation,
 			'destinationAddress': destinationLocation,
-			'startDate': rangeStart,
-			'endDate': rangeEnd,
+			'startDate': startDate,
+			'endDate': endDate,
 			'timeEnum': 0
 		},
-		function(returnedData) {
+		'success': function(returnedData) {
 			console.log(returnedData);
 		},
-		'json'
-	)
+		'dataType': "json",
+		'headers': "Access-Control-Allow-Origin: *"
+	})
 }
 
 $("#submit").click(function() {
