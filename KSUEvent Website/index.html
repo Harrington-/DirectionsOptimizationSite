@@ -6,6 +6,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="popper/popper.min.js"></script>
 		<script src="js/bootstrap-notify.min.js"></script>
+		<script src="js/moment.js"></script>
 		<script src="app.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
@@ -17,19 +18,10 @@
 		<link rel="stylesheet" href="css/fakeload.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<h1 class="text-primary" style="text-align: center"><strong>Trip Optimizer</strong></h1>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">LSD - Optimize Your Trip!</a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-		</nav>
 		<div class="well" id="test">
 			<div class="container-fluid">
 			<h2 style="text-align: center">Where do you want to go?</h2>
@@ -70,7 +62,14 @@
 				</div>
 			</div>
 		</div>
+		<br>
+		<div class="well" id="directions-results" style="display: none; text-align: center">
+			<h3 class="text-success"><strong>Good news! We've optimized your trip!</strong></h3>
+			<p id="besttraveltime"> </p>
+			
+			<br>
+			
+		</div>
 	</body>
-		
 	<script src="ajax.js"></script>
 </html>
