@@ -99,8 +99,3 @@ function fillInAddress() {
 }
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwSEeaII-jomAySPMzt2n_NxaRKP4bXQ&libraries=places&callback=initAutocomplete"
-	async defer></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwSEeaII-jomAySPMzt2n_NxaRKP4bXQ&libraries=places&callback=initStartAutocomplete"
-	async defer></script>
-	<script src="app.js"></script>
