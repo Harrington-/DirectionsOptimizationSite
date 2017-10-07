@@ -76,6 +76,7 @@ function initAutocomplete() {
     // When the user selects an address from the dropdown, populate the address
     // fields in the form.
     finish.addListener('place_changed', fillInAddress);
+	initStartAutocomplete();
 }
 
 function fillInAddress() {
@@ -97,5 +98,3 @@ function fillInAddress() {
         }
     }
 }
-
-
