@@ -32,6 +32,10 @@ function getOptimizedTrip() {
 			console.log(returnedData);
 			HoldOn.close();
 		},
+		'error': function() {
+			HoldOn.close();
+			//Tell user not to be an idiot
+		},
 		'dataType': "json",
 		'headers': "Access-Control-Allow-Origin: *"
 	})
