@@ -110,3 +110,6 @@ $(document).ready(function(){
     };
     date_input.datepicker(options);
 })
+$('#basic_example_4').timepicker({
+	regional: 'en',
+});
