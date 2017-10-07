@@ -35,6 +35,12 @@ function getOptimizedTrip() {
 		'error': function() {
 			HoldOn.close();
 			//Tell user not to be an idiot
+			$.notify({
+				title: '<strong>Listen! Listen!</strong>',
+				message: 'You gotta type shit in before you optimize your trip!'
+			},{
+				type: 'danger'
+			});
 		},
 		'dataType': "json",
 		'headers': "Access-Control-Allow-Origin: *"

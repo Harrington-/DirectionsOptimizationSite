@@ -5,6 +5,7 @@
 		<script src="jquery/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="popper/popper.min.js"></script>
+		<script src="js/bootstrap-notify.min.js"></script>
 		<script src="app.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
@@ -14,6 +15,8 @@
 		<link rel="stylesheet" href="lib/timepicker/jquery.timepicker.css" />
 		<script src="js/fakeLoader.min.js"></script>
 		<link rel="stylesheet" href="css/fakeload.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
 	</head>
 
 	<body>
@@ -26,52 +29,44 @@
 					<span class="icon-bar"></span>
 				</button>
 			</div>
-			<div class="navbar-collapse collapse">
-				<div class="navbar-header navbar-right">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#test">test</a></li>
-						<li class="active"><a href="#test1">test1</a></li>
-						<li><a></a></li>
-					</ul>
-				</div>
-			</div>
 		</nav>
-		<div class="well appendTo" id="test">
+		<div class="well" id="test">
 			<div class="container-fluid">
+			<h2 style="text-align: center">Where do you want to go?</h2>
 
 				<div class="form-group">
-					<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 margins">
 						<div class="row">
-							<label class="control-label" for="start">Start Location</label>
+							<label class="control-label" for="start">Where are you starting from?</label>
 							<input class="form-control col-xs-11 col-sm-11 col-md-11 col-lg-11" id="start" placeholder="Enter Starting Location"> </input>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 margins">
 						<div class="row">
-							<label class="control-label" for="finish">End Location</label>
+							<label class="control-label" for="finish">Where are you going to?</label>
 							<input class="form-control col-xs-12 col-sm-12 col-md-12 col-lg-3" id="finish" placeholder="Enter Destination"> </input>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 margins">
 						<div class="row">
-							<label class="control-label" for="date">Departure Date</label>
+							<label class="control-label" for="date">On what date?</label>
 							<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="col-xs-6 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 margins">
 						<div class="row">
-							<label class="control-label" for="startTime">Earliest</label>
+							<label class="control-label" for="startTime">Earliest arrival time</label>
 							<input class="form-control time ui-timepicker-input" id="startTimeRange" name="time" placeholder="hh:mm" type="text" autocomplete="off" />
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="col-xs-6 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 margins">
 						<div class="row">
-							<label class="control-label" for="startTime">Latest</label>
+							<label class="control-label" for="startTime">Latest arrival time</label>
 							<input class="form-control time ui-timepicker-input" id="endTimeRange" name="time" placeholder="hh:mm" type="text" autocomplete="off" />
 						</div>
 					</div>
 					<br/>
-					<button class="btn btn-primary col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" id="submit">Optimize Trip!</button>
+					<button class="btn btn-primary col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 margins" id="submit">Optimize Trip!</button>
 				</div>
 			</div>
 		</div>

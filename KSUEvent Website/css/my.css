@@ -12,3 +12,10 @@ body {
   overflow: auto; /*Allows the scrollable area to have a scrollbar based on the height of its content*/
   background: #ccc;
 }
+
+.margins { 
+	margin-bottom: 10px; 
+	margin-right: 10px; 
+	margin-left: 10px; 
+	margin-top: 10px;
+}
