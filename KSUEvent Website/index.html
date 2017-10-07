@@ -1,74 +1,65 @@
 <html>
 
-	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="jquery/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="popper/popper.min.js"></script>
-	    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
-		<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
-  </head>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="jquery/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="popper/popper.min.js"></script>
 	
-	<body>
-		<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+	<link rel="stylesheet" href="css/my.css"/>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header">
 			<a class="navbar-brand" href="#">LSD - Optimize Your Trip!</a>
-			</div>
-			<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li class="active"><a href="#">About</a></li>
-			<li class="active"><a href="#">Contact Us</a></li>
-			</ul>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
 		</div>
-		</nav>
-		<div class="container-fluid">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<h3>Starting Location</h3>
-				<div class="row">
-					<input class="input-lg col-xs-12 col-sm-12 col-md-12 col-lg-12" id="finish"> </input>
-				</div>
-			</div>
-			<div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<h3>Destination Location</h3>
-				<div class="row">
-					<input class="input-lg col-xs-12 col-sm-12 col-md-12 col-lg-12" id="start"> </input>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4>Departure Date</h4>
-				<div class="well">
-					<div id="departureDate" class="input-append date col-xs-12 col-sm-12 col-md-3 col-lg-3">
-						<input type="input-md text"></input>
-						<span class="add-on">
-							<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-						</span>
-					</div>
-					<div id="timeRangeStart" class="input-append date col-xs-12 col-sm-12 col-md-3 col-lg-3">
-						<input type="input-md text"></input>
-						<span class="add-on">
-							<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-						</span>
-					</div>
-					<div id="timeRangeEnd" class="input-append date col-xs-12 col-sm-12 col-md-3 col-lg-3">
-						<input type="input-md text"></input>
-						<span class="add-on">
-							<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-						</span>
-					</div>
-				</div>
-			</div>
-				<button class="btn btn-primary col-xs-12 col-sm-12 col-md-12 col-lg-12">Optimize Trip!</input>
+		<div class="navbar-collapse collapse">
+			<div class="navbar-header navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#test">test</a></li>
+					<li class="active"><a href="#test1">test1</a></li>
+					<li><a></a></li>
+				</ul>
 			</div>
 		</div>
+	</nav>
+    <div class="well appendTo" id="test">
+        <div class="container-fluid">
 
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div class="row">
+                    	<label class="control-label" for="start">Start Location</label>
+                        <input class="form-control col-xs-11 col-sm-11 col-md-11 col-lg-11" id="start" placeholder="Enter Starting Location"> </input>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div class="row">
+                    	<label class="control-label" for="finish">End Location</label>
+                        <input class="form-control col-xs-12 col-sm-12 col-md-12 col-lg-3" id="finish" placeholder="Enter Destination"> </input>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="row">
+                    	<label class="control-label" for="date">Departure Date</label>
+                    	<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+					</div>
+                </div>
+				<br/>
+                <submit class="btn btn-primary col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">Optimize Trip!</submit>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwSEeaII-jomAySPMzt2n_NxaRKP4bXQ&libraries=places&callback=initAutocomplete" async defer></script>
 
-
-
-	</body>
-
-	<script src="app.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwSEeaII-jomAySPMzt2n_NxaRKP4bXQ&libraries=places&callback=initAutocomplete"
-	async defer></script>
 </html>
