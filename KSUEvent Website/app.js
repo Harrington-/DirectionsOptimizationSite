@@ -29,7 +29,7 @@ function initStartAutocomplete() {
 
 function fillInStartAddress() {
     // Get the place details from the autocomplete object.
-    var place = start.getPlace();
+    var placeStart = start.getPlace();
 
     for (var component in componentForm) {
         document.getElementById(component).value = '';
@@ -38,10 +38,10 @@ function fillInStartAddress() {
 
     // Get each component of the address from the place details
     // and fill the corresponding field on the form.
-    for (var i = 0; i < place.address_components.length; i++) {
-        var addressType = place.address_components[i].types[0];
+    for (var i = 0; i < placeStart.address_components.length; i++) {
+        var addressType = placeStart.address_components[i].types[0];
         if (componentForm[addressType]) {
-            var val = place.address_components[i][componentForm[addressType]];
+            var val = placeStart.address_components[i][componentForm[addressType]];
             document.getElementById(addressType).value = val;
         }
     }
@@ -54,8 +54,8 @@ function fillInStartAddress() {
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-var placeSearch, finish;
-var componentForm = {
+var placeFinishSearch, finish;
+var componentFinishForm = {
     street_number: 'short_name',
     route: 'long_name',
     locality: 'long_name',
@@ -82,7 +82,7 @@ function fillInAddress() {
     // Get the place details from the autocomplete object.
     var place = finish.getPlace();
 
-    for (var component in componentForm) {
+    for (var component in componentFinishForm) {
         document.getElementById(component).value = '';
         document.getElementById(component).disabled = false;
     }
@@ -91,8 +91,8 @@ function fillInAddress() {
     // and fill the corresponding field on the form.
     for (var i = 0; i < place.address_components.length; i++) {
         var addressType = place.address_components[i].types[0];
-        if (componentForm[addressType]) {
-            var val = place.address_components[i][componentForm[addressType]];
+        if (componentFinishForm[addressType]) {
+            var val = place.address_components[i][componentFinishForm[addressType]];
             document.getElementById(addressType).value = val;
         }
     }
