@@ -1,16 +1,38 @@
 <html>
 
 	<head>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="jquery/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="popper/popper.min.js"></script>
 	</head>
 	
 	<body>
-
-		<input class=".input-lg" id="start"> </input>
-		<input class=".input-lg" id="finish"> </input>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1>LSD - The Trip Optimizer</h1>
+			</div>
+			<div class="panel-body">
+			
+				<div class="col-sm-12">
+					<h3>Starting Location</h3>
+					<div class="row">
+						<input class="input-lg col-sm-12" id="finish"> </input>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<h3>Destination Location</h3>
+					<div class="row">
+						<input class="input-lg col-sm-12" id="start"> </input>
+					</div>
+				</div>
+				
+				
+				<hr>
+				
+				<button class="btn btn-primary col-sm-12">Optimize Trip!</input>
+			</div>
+		</div>
 	</body>
 
 	<script src="app.js"></script>
