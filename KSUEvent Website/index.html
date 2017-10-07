@@ -9,6 +9,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 	<link rel="stylesheet" href="css/my.css"/>
+	<script src="app.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwSEeaII-jomAySPMzt2n_NxaRKP4bXQ&libraries=places&callback=initAutocomplete" async defer></script>
+	<script src="ajax.js"></script>
 </head>
 
 <body>
@@ -60,12 +63,10 @@
 					</div>
                 </div>
 				<br/>
-                <submit class="btn btn-primary col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">Optimize Trip!</submit>
+                <button class="btn btn-primary col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" id="submit">Optimize Trip!</button>
             </div>
         </div>
     </div>
 </body>
-<script src="app.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwSEeaII-jomAySPMzt2n_NxaRKP4bXQ&libraries=places&callback=initAutocomplete" async defer></script>
 
 </html>
