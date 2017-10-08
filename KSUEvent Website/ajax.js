@@ -25,7 +25,7 @@ function getOptimizedTrip() {
 
 	HoldOn.open(options);
 	$.getJSON({
-		'url': 'http://kenthackapi.azurewebsites.net/api/Direction', 
+		'url': 'https://kenthackapi.azurewebsites.net/api/Direction', 
 		'data': {
 			'startingAddress': startLocation,
 			'destinationAddress': destinationLocation,
@@ -38,6 +38,10 @@ function getOptimizedTrip() {
 			HoldOn.close();
 			$("#besttraveltime").text("Below you can find the best travel times between " + $("#startTimeRange").val() + " and " + $("#endTimeRange").val());
 			$(".newEntry").remove();
+			
+			returnedData.sort(function(a, b) {
+				
+			});
 			$.each(returnedData, function(k, v) {
 				
 				var durationValues = v['duration'].split(':');
@@ -65,6 +69,9 @@ function getOptimizedTrip() {
 				
 			});
 			$("#directions-results").show("slow");
+			$('html, body').animate({
+				scrollTop: $("#directions-results").offset().top
+			}, 2000)
 		},
 		'error': function() {
 			HoldOn.close();
