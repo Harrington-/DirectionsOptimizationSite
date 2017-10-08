@@ -85,7 +85,7 @@ function getOptimizedTrip() {
 			//Tell user not to be an idiot
 			$.notify({
 				title: '<strong>Listen! Listen!</strong>',
-				message: 'You gotta type shit in before you optimize your trip!'
+				message: 'All fields must be filled in and the selected time must be in the future!'
 			},{
 				type: 'danger'
 			});
