@@ -86,7 +86,11 @@ function getOptimizedTrip() {
 			parseErrorCodes(returnedData.responseJSON);
 			$.notify({
 				title: '<strong>Listen! Listen!</strong>',
+<<<<<<< HEAD
 				message: 'It appears something went wrong, please verify your trip information before continuing.'
+=======
+				message: 'All fields must be filled in and the selected time must be in the future!'
+>>>>>>> fb1574111809fda0777ef4d503a8eee566e1e787
 			},{
 				type: 'warning'
 			});
