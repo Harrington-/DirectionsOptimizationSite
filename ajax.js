@@ -80,14 +80,15 @@ function getOptimizedTrip() {
 				scrollTop: $("#directions-results").offset().top
 			}, 2000)
 		},
-		'error': function() {
+		'error': function(returnedData) {
 			HoldOn.close();
 			//Tell user not to be an idiot
+			parseErrorCodes(returnedData.responseJSON);
 			$.notify({
 				title: '<strong>Listen! Listen!</strong>',
-				message: 'You gotta type shit in before you optimize your trip!'
+				message: 'It appears something went wrong, please verify your trip information before continuing.'
 			},{
-				type: 'danger'
+				type: 'warning'
 			});
 		},
 		'dataType': "json",
@@ -97,7 +98,17 @@ function getOptimizedTrip() {
 
 $("#submit").click(function() {
 	$("#directions-results").hide("slow");
-	getOptimizedTrip();
+	if(formIsNotEmpty()){
+		getOptimizedTrip();
+	}
+	else {
+		$.notify({
+			title: '<strong>Listen! Listen!</strong>',
+			message: 'Please fill out all of the fields. Thanks :)'
+		},{
+			type: 'warning'
+		});
+	}
 });
 
 function formatAMPM(date) {
@@ -132,4 +143,62 @@ function timeToDate(time) {
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+function parseErrorCodes(data){
+
+	if(data.StartingAddress){
+		$.notify({
+			title: '<strong>Listen! Listen!</strong>',
+			message: data.StartingAddress.toString().replace("StartingAddress", "Enter Starting Location")
+		},{
+			type: 'danger'
+		});
+	}
+	if(data.DestinationAddress){
+		$.notify({
+			title: '<strong>Listen! Listen!</strong>',
+			message: data.DestinationAddress.toString().replace("DestinationAddress","Enter Destination")
+		},{
+			type: 'danger'
+		});
+	}
+	if(data.DepartureTime){
+		$.notify({
+			title: '<strong>Listen! Listen!</strong>',
+			message: 'Please verify that the departure dates are not within the past.'
+		},{
+			type: 'danger'
+		});
+	}
+	if(data.StartDate){
+		$.notify({
+			title: '<strong>Listen! Listen!</strong>',
+			message: data.StartDate.toString().replace("StartDate", "Earliest Departure Time")
+		},{
+			type: 'danger'
+		});
+	}
+	if(data.EndDate){
+		$.notify({
+			title: '<strong>Listen! Listen!</strong>',
+			message: data.EndDate[1].toString()
+		},{
+			type: 'danger'
+		});
+	}
+}
+function formIsNotEmpty(){
+	var start = $.trim($("#start").val()).length;
+	var finish = $.trim($("#finish").val()).length;
+	var date = $.trim($("#date").val()).length;
+	var startTime = $.trim($("#startTimeRange").val()).length;
+	var endTime = $.trim($("#endTimeRange").val()).length;
+
+	if(start > 0 && finish > 0 && date > 0 && startTime > 0 && endTime > 0){
+		return true;
+	}else {
+		return false;
+	}
+
 }
