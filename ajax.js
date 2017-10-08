@@ -1,4 +1,11 @@
 
+var loadingMessages = [
+	'Ending world hunger... Please wait...',
+	'Preparing to save the trees!',
+	"*Cha-ching* ... That's the sounds of your savings!"
+];
+
+
 var globalVar;
 function getOptimizedTrip() {
 	
@@ -18,7 +25,7 @@ function getOptimizedTrip() {
 	
 	var options = {
 		theme:"sk-cube-grid",
-		message:'Ending world hunger... Please wait...',
+		message:loadingMessages[getRandom(0, loadingMessages.length)],
 		backgroundColor:"#1847B1",
 		textColor:"white"
 	};
@@ -36,7 +43,7 @@ function getOptimizedTrip() {
 		'success': function(returnedData) {
 			console.log(returnedData);
 			HoldOn.close();
-			$("#besttraveltime").text("Below you can find the best travel times between " + $("#startTimeRange").val() + " and " + $("#endTimeRange").val());
+			$("#besttraveltime").text("Below you can find the best travel time between " + $("#startTimeRange").val() + " and " + $("#endTimeRange").val());
 			$(".newEntry").remove();
 			
 			returnedData.sort(function(a, b) {
@@ -121,4 +128,8 @@ function timeToDate(time) {
 	console.log(time)
 	console.log(someDate);
 	return someDate;
+}
+
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
