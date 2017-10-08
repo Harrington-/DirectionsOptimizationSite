@@ -1,6 +1,3 @@
-
-
-
 var placeSearch, start;
 var componentForm = {
     street_number: 'short_name',
